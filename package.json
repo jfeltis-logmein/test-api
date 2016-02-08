@@ -1,0 +1,15 @@
+{
+	"name": "jfeltis-api",
+	"version": "0.0.1",
+	"description": "test REST endpoint",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"express": "4.13.4"
+	},
+	"engines": {
+		"node": ">= 0.10.0"
+	}
+}
