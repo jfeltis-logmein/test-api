@@ -6,7 +6,7 @@ app.set('port', process.env.PORT || 1337);
 
 app.post('/users', function(req, res){
 	var users = [],
-			recordsToReturn = (req.query.r < 1000 ? req.query.r : 1000) || 10;
+			recordsToReturn = (!req.query.r ? 10 : (req.query.r < 1000 ? req.query.r : 1000));
 
 	for(var i = 0; i < recordsToReturn; i++){
 		var fn = util.getFirstName(),
