@@ -2,6 +2,8 @@ var express = require('express'),
 		app = express(),
 		util = require('./js/util');
 
+app.set('port', process.env.PORT || 1337);
+
 app.post('/users', function(req, res){
 	var users = [],
 			recordsToReturn = req.query.r || 10;
@@ -24,6 +26,6 @@ app.post('/users', function(req, res){
 	res.end(JSON.stringify(users));
 });
 
-app.listen(8080, function(){
-	console.log(`listening on 8080`);
+app.listen(app.get('port'), function(){
+	console.log(`listning on ${app.get('port')}`);
 });
