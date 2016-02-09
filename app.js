@@ -11,14 +11,15 @@ app.post('/users', function(req, res){
 	for(var i = 0; i < recordsToReturn; i++){
 		var fn = util.getFirstName(),
 				ln = util.getLastName(),
-				e = util.getEmail(fn, ln);
+				e = util.getEmail(fn, ln),
+				p = util.getPhone(i);
 
 		users.push({
 			id: i,
 			first_name: fn,
 			last_name: ln,
 			email: e,
-			phone: '555.555.5555'
+			phone: p
 		});
 	}
 

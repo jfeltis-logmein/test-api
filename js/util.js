@@ -12,4 +12,11 @@ exports.getLastName = function(){
 
 exports.getEmail = function(fn, ln){
 	return `${fn.substring(0, 1).toLowerCase()}${ln.toLowerCase()}@email.com`;
-}
+};
+
+exports.getPhone = function(i){
+	var phone = '555.555.5555',
+			indexLength = String(i).length;
+
+	return phone.substr(0, (phone.length - indexLength)) + i;
+};
