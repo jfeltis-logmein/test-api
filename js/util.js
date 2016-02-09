@@ -15,8 +15,5 @@ exports.getEmail = function(fn, ln){
 };
 
 exports.getPhone = function(i){
-	var phone = '555.555.5555',
-			indexLength = String(i).length;
-
-	return phone.substr(0, (phone.length - indexLength)) + i;
+	return '555.555.5555'.substr(0, (12 - String(i).length)) + i;
 };
